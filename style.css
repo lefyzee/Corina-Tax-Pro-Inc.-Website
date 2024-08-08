@@ -1,0 +1,379 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #001a33; /* Darker navy blue background */
+    color: #f4f4f4; /* Light text color for contrast */
+}
+
+/* Link Styles */
+a {
+    color: #ffd700; /* Golden color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e0b200; /* Darker golden color on hover */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #005494; 
+    color: #ffd700; /* Golden text */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.title {
+    margin: 0;
+    font-size: 38px;
+    flex-shrink: 0;
+}
+
+.middle-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.middle-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.middle-links a {
+    font-size: 24px;
+    color: #ffd700; /* Golden links */
+}
+
+.middle-links a:hover {
+    color: #fff; /* White color on hover */
+}
+
+.ro {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffd700; /* Golden background */
+    color: #001a33; /* Darker navy text */
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.ro:hover {
+    background-color: #e0b200; /* Darker golden background on hover */
+}
+
+@media (max-width: 1200px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .middle-links {
+        order: 1;
+        width: 100%;
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .ro {
+        order: 2;
+        align-self: flex-start;
+    }
+
+    .title, .ro {
+        margin-bottom: 10px;
+    }
+}
+
+/* Hero Section Styles */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Reduced padding for a smaller section */
+    background: linear-gradient(135deg, #003c79, #00366b); /* Blue gradient background */
+    color: #ffd700; /* Golden text */
+}
+
+.hero-text {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 56px; 
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 26px; /* Reduced font size */
+    margin-bottom: 20px;
+}
+
+.hero-text a img {
+    border: 0;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    max-height: 400px; /* Reduced max-height */
+}
+
+@media (max-width: 1200px) {
+    .hero-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/* Why Us Section */
+.why-us-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #002b4d; /* Slightly lighter dark blue background */
+    color: #f4f4f4; /* Light text color */
+    margin-top: 0; /* Remove top margin */
+}
+
+.why-us-image {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.why-us-content {
+    flex: 1;
+    max-width: 50%;
+    padding: 0 20px;
+}
+
+.why-us-header {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.Why-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Why-links li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f4f4f4; /* Light text color for list items */
+}
+
+/* Basic Services Section */
+.services-section {
+    display: flex;
+    justify-content: center; /* Center services content */
+    padding: 50px 20px;
+    background-color: #002b4d; /* Match with Why Us section */
+    color: #f4f4f4; /* Light text color */
+    margin-top: 0; /* Remove top margin */
+}
+
+.services-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center services content */
+    width: 100%; /* Full width */
+}
+
+.services-header {
+    font-size: 48px; /* Larger font size */
+    margin-bottom: 20px;
+    text-align: center; /* Center align header */
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.services-item {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    background-color: #003366; /* Dark navy background for each item */
+    padding: 20px;
+    border: 1px solid #002b4d; /* Slightly lighter border */
+    border-radius: 8px;
+}
+
+.services-item h4 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.services-item p {
+    margin: 0;
+    font-size: 18px;
+    color: #f4f4f4; /* Light text color */
+}
+
+/* Reviews Section */
+.review-header {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f4f4f4; /* Light text color for header */
+}
+
+.taggbox {
+    color: #333; /* Dark text color for review messages */
+}
+
+/* Contact Us Section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #002b4d; /* Slightly lighter dark blue background */
+    gap: 20px;
+    color: #f4f4f4; /* Light text color */
+    margin-top: 0; /* Remove top margin */
+}
+
+.contact-info,
+.contact-hours,
+.contact-map {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.contact-info {
+    max-width: 100%; /* Full width for contact info */
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    font-size: 20px; /* Increased font size */
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #ffd700; /* Golden color for links */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-hours {
+    max-width: 100%; /* Full width for contact hours */
+    text-align: center;
+}
+
+.contact-hours ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px; /* Increased font size */
+}
+
+.contact-hours li {
+    margin-bottom: 10px;
+}
+
+.contact-map {
+    flex: 2;
+    max-width: 100%;
+}
+
+.contact-header {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #001a33; /* Darker navy background */
+    color: #ffd700; /* Golden text */
+    margin-top: 0; /* Remove top margin */
+}
+
+.logo-footer {
+    margin-right: 20px;
+    max-width: 150px;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.address,
+.phone {
+    margin: 0;
+}
+
+.address {
+    margin-bottom: 10px;
+}
+
+.company {
+    font-size: 24px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-footer {
+        margin: 0 0 20px 0;
+        max-width: 120px;
+    }
+}
